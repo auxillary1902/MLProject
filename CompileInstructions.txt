@@ -1,0 +1,37 @@
+Machine Learning Project :
+Compile Instructions:
+
+1) In this project 'satisfactionmain.csv' is the dataset which is a survey of the different attributes that decide if a customer is satisfied with his air travel offered by the airline
+
+2) decisiontree.py is a simple decision tree that is built using sklearn package of the dataset , running the file in terminal as:
+python decisiontree.py
+
+the decision tree is built using both gini index model and information gain and it predicts the accuracy of the classifier in each case along with the precision measures including sensitivity and f1-score
+
+running the model also generates a plot of the decision trees in the source folder as pdf files. this plot can be analysed to find out which attribute the airline has to focus on to better itself
+
+Also by running the model various times, with varying depth of decision tree for information gain, different accuracy values are obtained. 
+Gnuplot is used to plot the graph of Accuracy vs Depth of tree using these values.
+
+3) File 1.py contains another implementation of the classification problem,but this time using bagging and 10 fold cross - validation. for each of the sub datasets either decision tree is used or a Gaussian Naive Bayes Classifier is used. 
+By default decision tree is used. run the model as:
+python 1.py
+
+it runs the model and generates 10 accuracy values for each of the 10 folds and final accuacy value is the average of all 10 folds.
+
+To use gaussian Naive Bayes classifier, do the following changes to 1.py
+a) chnage base_estimator of the bagging classifier function to variable gnb
+b)uncomment the declaration of the variable gnb
+c) uncomment the import of Gaussian Naive Bayes Classifier.
+
+run the model again using
+python 1.py
+
+this time again it generates 10 accuracy values for each of the folds and the overall accuracy is the average of the accuracy for each of the folds.
+
+
+4) File svm.py runs a support vector machine model to perform the same classification. However training time is significantly larger and using complete dataset causes dump error. Therefore only 1,00,000 records are used for training and testing in 70% handout method.
+run the model using :
+python svm.py
+
+the model produces an accuracy value for the classification process.
