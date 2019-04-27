@@ -20,7 +20,7 @@ python 1.py
 it runs the model and generates 10 accuracy values for each of the 10 folds and final accuacy value is the average of all 10 folds.
 
 To use gaussian Naive Bayes classifier, do the following changes to 1.py
-a) chnage base_estimator of the bagging classifier function to variable gnb
+a) change base_estimator of the bagging classifier function to variable gnb
 b)uncomment the declaration of the variable gnb
 c) uncomment the import of Gaussian Naive Bayes Classifier.
 
